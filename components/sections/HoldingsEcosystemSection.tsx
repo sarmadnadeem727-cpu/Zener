@@ -42,7 +42,7 @@ const companies: GroupCompany[] = [
     accentColor: "border-zener-cyan text-zener-cyan",
     glowColor: "rgba(100, 255, 218, 0.2)",
     icon: Database,
-    logoImage: "/zener-logo.jpg"
+    logoImage: "/logo.png"
   },
   {
     id: "spicechain",

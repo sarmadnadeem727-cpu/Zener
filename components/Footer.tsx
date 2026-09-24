@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
             <Link to="/" className="inline-flex items-center space-x-3 group">
               <div className="w-10 h-10 rounded-md bg-[#0a192f] border border-[#00A3C1]/50 p-1 flex items-center justify-center shadow-[0_0_14px_rgba(0,163,193,0.3)] group-hover:border-[#00A3C1] transition-all duration-300">
                 <img
-                  src="/zener-logo.jpg"
+                  src="/logo.png"
                   alt="ZENER Logo"
                   className="w-full h-full object-contain rounded"
                 />

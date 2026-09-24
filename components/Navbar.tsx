@@ -85,7 +85,7 @@ const Navbar: React.FC = () => {
           <div className="relative">
             <div className="w-10 h-10 rounded-md bg-zener-navy/95 border border-zener-cyan/50 p-1 flex items-center justify-center shadow-[0_0_16px_rgba(100,255,218,0.25)] group-hover:border-zener-cyan group-hover:shadow-[0_0_22px_rgba(100,255,218,0.45)] transition-all duration-300 overflow-hidden">
               <img
-                src="/zener-logo.jpg"
+                src="/logo.png"
                 alt="ZENER Logo"
                 className="w-full h-full object-contain"
               />

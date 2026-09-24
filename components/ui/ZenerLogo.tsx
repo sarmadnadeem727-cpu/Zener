@@ -30,7 +30,7 @@ const ZenerLogo: React.FC<ZenerLogoProps> = ({ className = "w-full h-full", anim
                 whileHover={{ scale: 1.02, borderColor: "rgba(0, 163, 193, 0.5)" }}
             >
                 <img
-                    src="/zener-logo-scm.jpg"
+                    src="/logo.png"
                     alt="Zener Supply Chain Hub"
                     className="w-full h-full object-contain p-2"
                 />

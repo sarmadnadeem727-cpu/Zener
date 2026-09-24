@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="public/zener-logo.jpg" alt="ZENER Logo" width="220" />
+  <img src="public/logo.png" alt="ZENER Logo" width="220" />
   <h1>ZENER</h1>
   <p><strong>Digital Supply Chain Solutions &amp; Operational Infrastructure</strong></p>
   <p><em>A Zener Holdings Company</em></p>

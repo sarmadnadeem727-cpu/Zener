@@ -26,7 +26,7 @@ const SystemDemo: React.FC = () => {
                 <header className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8 border-b border-zener-border pb-4">
                     <div className="flex items-center space-x-3">
                         <div className="w-10 h-10 rounded-md bg-zener-navy border border-zener-cyan/60 p-1 flex items-center justify-center shadow-[0_0_14px_rgba(100,255,218,0.3)] shrink-0">
-                            <img src="/zener-logo.jpg" alt="ZENER Logo" className="w-full h-full object-contain rounded" />
+                            <img src="/logo.png" alt="ZENER Logo" className="w-full h-full object-contain rounded" />
                         </div>
                         <div>
                             <h1 className="text-xl md:text-2xl font-bold tracking-wider flex items-center gap-2">

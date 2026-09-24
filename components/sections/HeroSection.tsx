@@ -53,7 +53,7 @@ const HeroSection: React.FC = () => {
                 >
                     <div className="flex items-center gap-3 mb-6">
                         <div className="w-12 h-12 rounded-lg bg-zener-navy/95 border border-zener-cyan/60 p-1.5 flex items-center justify-center shadow-[0_0_22px_rgba(100,255,218,0.35)]">
-                            <img src="/zener-logo.jpg" alt="ZENER" className="w-full h-full object-contain rounded" />
+                            <img src="/logo.png" alt="ZENER" className="w-full h-full object-contain rounded" />
                         </div>
                         <div className="flex flex-col">
                             <span className="text-xs font-mono font-bold tracking-[0.25em] text-zener-cyan uppercase">ZENER HOLDINGS</span>

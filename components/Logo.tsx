@@ -21,7 +21,7 @@ const Logo: React.FC<LogoProps> = ({
       <div className={`inline-flex items-center gap-3 ${className}`}>
         <div className="relative flex items-center justify-center p-1 rounded-md bg-zener-navy/90 border border-zener-cyan/40 shadow-[0_0_14px_rgba(100,255,218,0.25)] group-hover:border-zener-cyan transition-all duration-300">
           <img
-            src="/zener-logo.jpg"
+            src="/logo.png"
             alt="ZENER Logo"
             className={`${imgClassName} object-contain rounded`}
           />
