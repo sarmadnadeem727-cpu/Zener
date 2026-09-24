@@ -37,8 +37,28 @@ const NetworkBackground = () => {
 const HeroSection: React.FC = () => {
     return (
         <SnapSection className="relative bg-zener-dark">
-            {/* Background Layer */}
-            <div className="absolute inset-0 z-0 opacity-40">
+            {/* Live Background Video Layer */}
+            <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="auto"
+                    className="w-full h-full object-cover object-center scale-105 filter brightness-90 contrast-110"
+                >
+                    <source src="/herotab-video.mp4" type="video/mp4" />
+                    <source src="/herotab video.MP4" type="video/mp4" />
+                </video>
+
+                {/* High-Tech Gradient Overlays for Readability & Depth */}
+                <div className="absolute inset-0 bg-gradient-to-r from-zener-dark/95 via-zener-dark/75 to-zener-dark/40" />
+                <div className="absolute inset-0 bg-gradient-to-t from-zener-dark via-transparent to-zener-dark/70" />
+                <div className="absolute inset-0 bg-zener-dark/20 backdrop-blur-[0.5px]" />
+            </div>
+
+            {/* Subtle Interactive Three.js Particle Overlay floating above video */}
+            <div className="absolute inset-0 z-[1] opacity-25 pointer-events-none">
                 <Canvas camera={{ position: [0, 0, 1] }}>
                     <NetworkBackground />
                 </Canvas>
