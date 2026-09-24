@@ -6,41 +6,41 @@ import SnapSection from '../layout/SnapSection';
 const IntelligenceSection: React.FC = () => {
     return (
         <SnapSection className="bg-gradient-to-b from-zener-navy to-zener-dark">
-            <div className="max-w-7xl mx-auto w-full px-6 flex flex-col lg:flex-row items-center justify-between gap-12">
+            <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
 
                 {/* Text Content */}
-                <div className="lg:w-1/3">
+                <div className="lg:w-1/3 w-full">
                     <motion.h2
-                        initial={{ opacity: 0, x: -50 }}
+                        initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="text-4xl md:text-5xl font-bold text-white mb-6"
+                        className="text-2xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-6"
                     >
                         Data Becomes <br />
                         <span className="text-zener-cyan">Intelligence.</span>
                     </motion.h2>
                     <motion.p
-                        initial={{ opacity: 0, x: -50 }}
+                        initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="text-zener-text-muted text-lg mb-8"
+                        className="text-zener-text-muted text-sm sm:text-lg mb-4 sm:mb-8 font-light"
                     >
-                        Raw data is noise. processed data is insight. Zener transforms your supply chain metrics into a predictive intelligence layer.
+                        Raw data is noise. Processed data is insight. Zener transforms your supply chain metrics into a predictive intelligence layer.
                     </motion.p>
 
                     <motion.div
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         transition={{ delay: 0.6 }}
-                        className="flex items-center space-x-2 text-sm font-mono text-zener-cyan"
+                        className="flex items-center space-x-2 text-xs sm:text-sm font-mono text-zener-cyan mb-4 lg:mb-0"
                     >
-                        <Activity className="w-4 h-4 animate-pulse" />
+                        <Activity className="w-3.5 h-3.5 sm:w-4 sm:h-4 animate-pulse" />
                         <span>LIVE STREAM: ANALYTICS_V1</span>
                     </motion.div>
                 </div>
 
                 {/* Dashboard Visual */}
-                <div className="lg:w-2/3 w-full bg-zener-glass border border-zener-border rounded-lg p-6 relative overflow-hidden shadow-2xl">
+                <div className="lg:w-2/3 w-full bg-zener-glass border border-zener-border rounded-xl p-4 sm:p-6 relative overflow-hidden shadow-2xl">
                     {/* Dashboard Header */}
                     <div className="flex justify-between items-center border-b border-zener-border pb-4 mb-6">
                         <span className="text-xs font-mono text-zener-text-muted uppercase">System Overview</span>

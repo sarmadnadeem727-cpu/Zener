@@ -59,23 +59,23 @@ const HeroSection: React.FC = () => {
                 <div className="absolute inset-0 bg-zener-dark/20 backdrop-blur-[0.5px]" />
             </div>
 
-            {/* Subtle Interactive Three.js Particle Overlay floating above video */}
-            <div className="absolute inset-0 z-[1] opacity-25 pointer-events-none">
+            {/* Subtle Interactive Three.js Particle Overlay floating above video (hidden on mobile for high-performance fluid scroll) */}
+            <div className="absolute inset-0 z-[1] opacity-25 pointer-events-none hidden md:block">
                 <Canvas camera={{ position: [0, 0, 1] }}>
                     <NetworkBackground />
                 </Canvas>
             </div>
 
             {/* Content Layer */}
-            <div className="relative z-10 flex flex-col items-start justify-center max-w-7xl mx-auto px-6 w-full h-full">
+            <div className="relative z-10 flex flex-col items-start justify-center max-w-7xl mx-auto px-4 sm:px-6 w-full h-full">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                    <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold tracking-tight text-white mb-6">
+                    <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold tracking-tight text-white mb-4 sm:mb-6">
                         ZENER
-                        <span className="block text-xl sm:text-2xl md:text-3xl font-light text-zener-cyan tracking-[0.2em] mt-3">
+                        <span className="block text-sm sm:text-xl md:text-3xl font-light text-zener-cyan tracking-wider sm:tracking-[0.2em] mt-2 sm:mt-3">
                             DIGITAL SUPPLY CHAIN INFRASTRUCTURE
                         </span>
                     </h1>
@@ -85,18 +85,18 @@ const HeroSection: React.FC = () => {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                    className="max-w-2xl mb-10 space-y-3"
+                    className="max-w-2xl mb-8 sm:mb-10 space-y-2.5 sm:space-y-3"
                 >
-                    <div className="flex items-center gap-3 text-lg sm:text-xl md:text-2xl text-zener-text font-light">
-                        <span className="w-2 h-2 rounded-full bg-zener-cyan shrink-0 shadow-[0_0_8px_rgba(100,255,218,0.8)]" />
+                    <div className="flex items-center gap-2.5 sm:gap-3 text-sm sm:text-lg md:text-2xl text-zener-text font-light">
+                        <span className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-zener-cyan shrink-0 shadow-[0_0_8px_rgba(100,255,218,0.8)]" />
                         <span>We Integrate <strong className="font-semibold text-white">ERP Systems</strong>.</span>
                     </div>
-                    <div className="flex items-center gap-3 text-lg sm:text-xl md:text-2xl text-zener-text font-light">
-                        <span className="w-2 h-2 rounded-full bg-zener-cyan shrink-0 shadow-[0_0_8px_rgba(100,255,218,0.8)]" />
+                    <div className="flex items-center gap-2.5 sm:gap-3 text-sm sm:text-lg md:text-2xl text-zener-text font-light">
+                        <span className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-zener-cyan shrink-0 shadow-[0_0_8px_rgba(100,255,218,0.8)]" />
                         <span>We Enable <strong className="font-semibold text-white">BI Intelligence</strong>.</span>
                     </div>
-                    <div className="flex items-center gap-3 text-lg sm:text-xl md:text-2xl text-zener-text font-light">
-                        <span className="w-2 h-2 rounded-full bg-zener-cyan shrink-0 shadow-[0_0_8px_rgba(100,255,218,0.8)]" />
+                    <div className="flex items-center gap-2.5 sm:gap-3 text-sm sm:text-lg md:text-2xl text-zener-text font-light">
+                        <span className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-zener-cyan shrink-0 shadow-[0_0_8px_rgba(100,255,218,0.8)]" />
                         <span>We Engineer <strong className="font-semibold text-white">Operational Clarity</strong>.</span>
                     </div>
                 </motion.div>
@@ -105,10 +105,11 @@ const HeroSection: React.FC = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.5 }}
+                    className="w-full sm:w-auto"
                 >
                     <Link
                         to="/services"
-                        className="group relative inline-flex items-center gap-3 px-8 py-4 border border-zener-cyan/60 bg-zener-cyan/10 hover:bg-zener-cyan text-zener-cyan hover:text-zener-dark font-bold tracking-widest uppercase text-xs sm:text-sm transition-all duration-300 shadow-[0_0_20px_rgba(100,255,218,0.2)] hover:shadow-[0_0_30px_rgba(100,255,218,0.5)] rounded"
+                        className="group relative inline-flex items-center justify-center gap-3 w-full sm:w-auto px-7 py-3.5 sm:px-8 sm:py-4 border border-zener-cyan/60 bg-zener-cyan/15 hover:bg-zener-cyan text-zener-cyan hover:text-zener-dark font-bold tracking-widest uppercase text-xs sm:text-sm transition-all duration-300 shadow-[0_0_20px_rgba(100,255,218,0.2)] hover:shadow-[0_0_30px_rgba(100,255,218,0.5)] rounded"
                     >
                         <span className="relative z-10">Explore Services</span>
                         <ArrowRight size={16} className="relative z-10 group-hover:translate-x-1.5 transition-transform duration-300" />

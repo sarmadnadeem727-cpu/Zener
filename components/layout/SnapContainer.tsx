@@ -6,7 +6,7 @@ interface SnapContainerProps {
 
 const SnapContainer: React.FC<SnapContainerProps> = ({ children }) => {
     return (
-        <div className="snap-container min-h-screen md:h-screen w-full bg-zener-dark overflow-y-auto overflow-x-hidden scroll-smooth">
+        <div className="w-full bg-zener-dark md:snap-container md:h-screen md:overflow-y-auto overflow-x-hidden scroll-smooth">
             {children}
         </div>
     );

@@ -109,14 +109,14 @@ const HoldingsGatewaySection: React.FC = () => {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.4 }}
-          className="inline-block"
+          className="w-full sm:w-auto inline-block"
         >
           <Link
             to="/holdings"
-            className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-zener-cyan text-zener-dark font-bold text-xs sm:text-sm tracking-widest uppercase hover:bg-white transition-all shadow-[0_0_25px_rgba(100,255,218,0.3)] group"
+            className="inline-flex items-center justify-center gap-2.5 sm:gap-3 w-full sm:w-auto px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-zener-cyan text-zener-dark font-bold text-xs sm:text-sm tracking-wider sm:tracking-widest uppercase hover:bg-white transition-all shadow-[0_0_25px_rgba(100,255,218,0.3)] group text-center"
           >
-            <span>Explore Dedicated Holdings Group Portal</span>
-            <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+            <span>Explore Holdings Group Portal</span>
+            <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform shrink-0" />
           </Link>
         </motion.div>
       </div>

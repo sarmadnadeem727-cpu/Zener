@@ -63,6 +63,17 @@ const Navbar: React.FC = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
   const navLinks = [
     { name: 'ZENER SCM', path: '/' },
     { name: 'HOLDINGS GROUP', path: '/holdings' },
@@ -77,10 +88,10 @@ const Navbar: React.FC = () => {
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
       className={`fixed w-full z-50 transition-all duration-500 border-b ${isScrolled
         ? 'bg-zener-dark/95 backdrop-blur-md border-zener-border shadow-2xl py-3.5'
-        : 'bg-zener-dark/40 backdrop-blur-sm border-white/5 py-5'
+        : 'bg-zener-dark/40 backdrop-blur-sm border-white/5 py-4 sm:py-5'
         }`}
     >
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center">
         {/* Brand with official Zener logo */}
         <Link to="/" className="flex items-center space-x-3 group relative z-50">
           <div className="relative">

@@ -4,7 +4,7 @@ import { Linkedin, Globe, ExternalLink, Network } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#05081A] text-white py-16 px-6 border-t border-[#00A3C1]/15">
+    <footer className="bg-[#05081A] text-white pt-12 pb-28 md:py-16 px-4 sm:px-6 border-t border-[#00A3C1]/15">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
           {/* Brand Info */}

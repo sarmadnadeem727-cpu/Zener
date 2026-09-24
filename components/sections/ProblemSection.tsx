@@ -5,42 +5,42 @@ import SnapSection from '../layout/SnapSection';
 
 const ProblemSection: React.FC = () => {
     const nodes = [
-        { id: 1, icon: Database, label: "ERP Core", start: { x: -300, y: -200, rotate: -15 }, end: { x: 0, y: -100, rotate: 0 } },
-        { id: 2, icon: Truck, label: "Logistics", start: { x: 350, y: -150, rotate: 20 }, end: { x: 150, y: 0, rotate: 0 } },
-        { id: 3, icon: Box, label: "Inventory", start: { x: -250, y: 200, rotate: -10 }, end: { x: -150, y: 0, rotate: 0 } },
-        { id: 4, icon: BarChart3, label: "Analytics", start: { x: 300, y: 250, rotate: 15 }, end: { x: 0, y: 100, rotate: 0 } },
+        { id: 1, icon: Database, label: "ERP Core", start: { x: -120, y: -100, rotate: -15 }, end: { x: 0, y: -90, rotate: 0 } },
+        { id: 2, icon: Truck, label: "Logistics", start: { x: 120, y: -80, rotate: 20 }, end: { x: 110, y: 0, rotate: 0 } },
+        { id: 3, icon: Box, label: "Inventory", start: { x: -110, y: 90, rotate: -10 }, end: { x: -110, y: 0, rotate: 0 } },
+        { id: 4, icon: BarChart3, label: "Analytics", start: { x: 120, y: 110, rotate: 15 }, end: { x: 0, y: 90, rotate: 0 } },
     ];
 
     return (
         <SnapSection className="bg-zener-dark relative">
             <div className="absolute inset-x-0 top-0 h-px bg-current opacity-10 text-zener-cyan" />
 
-            <div className="max-w-7xl mx-auto w-full h-full flex flex-col md:flex-row items-center justify-between px-6 relative z-10">
+            <div className="max-w-7xl mx-auto w-full h-full flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 relative z-10">
 
                 {/* Text Area */}
-                <div className="md:w-1/2 mb-12 md:mb-0 z-20">
+                <div className="md:w-1/2 mb-8 md:mb-0 z-20">
                     <motion.div
-                        initial={{ opacity: 0, x: -50 }}
+                        initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
                     >
-                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight">
                             Supply Chains Are <br />
                             <span className="text-zener-text-muted">Fragmented.</span>
                         </h2>
-                        <p className="text-xl text-zener-text-muted font-light max-w-md mb-8">
+                        <p className="text-base sm:text-xl text-zener-text-muted font-light max-w-md mb-6 sm:mb-8">
                             Disconnected systems create blind spots, delays, and inefficiencies. Data silos prevent real-time decision making.
                         </p>
 
-                        <div className="h-px w-24 bg-zener-cyan/50 mb-8" />
+                        <div className="h-px w-20 sm:w-24 bg-zener-cyan/50 mb-6 sm:mb-8" />
 
                         <motion.div
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
-                            transition={{ delay: 1, duration: 1 }}
+                            transition={{ delay: 0.6, duration: 0.8 }}
                         >
-                            <h3 className="text-2xl text-white font-semibold mb-2">ZENER Unifies.</h3>
-                            <p className="text-lg text-zener-text-muted font-light">
+                            <h3 className="text-xl sm:text-2xl text-white font-semibold mb-2">ZENER Unifies.</h3>
+                            <p className="text-sm sm:text-lg text-zener-text-muted font-light">
                                 We architect the operational backbone that brings every node into perfect alignment.
                             </p>
                         </motion.div>
@@ -48,7 +48,7 @@ const ProblemSection: React.FC = () => {
                 </div>
 
                 {/* Visual Area */}
-                <div className="md:w-1/2 h-[380px] sm:h-[450px] md:h-[500px] w-full relative flex items-center justify-center scale-75 sm:scale-90 md:scale-100 origin-center">
+                <div className="md:w-1/2 h-[320px] sm:h-[420px] md:h-[500px] w-full max-w-full overflow-hidden relative flex items-center justify-center scale-90 sm:scale-95 md:scale-100 origin-center">
                     {/* Center Grid Line (implied backbone) */}
                     <motion.div
                         className="absolute top-0 bottom-0 w-px bg-zener-cyan/20"

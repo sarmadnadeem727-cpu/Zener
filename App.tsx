@@ -19,13 +19,19 @@ const ScrollToTop = () => {
   return null;
 };
 
+const AppFooter = () => {
+  const { pathname } = useLocation();
+  if (pathname === '/system' || pathname === '/builder') return null;
+  return <Footer />;
+};
+
 const App: React.FC = () => {
   return (
     <Router>
       <ScrollToTop />
       <div className="flex flex-col min-h-screen bg-zener-dark">
         <Navbar />
-        <main className="flex-grow pb-16 md:pb-0">
+        <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/zener" element={<Home />} />
@@ -36,7 +42,7 @@ const App: React.FC = () => {
             <Route path="/builder" element={<Builder />} />
           </Routes>
         </main>
-        <Footer />
+        <AppFooter />
         <MobileBottomNav />
       </div>
     </Router>

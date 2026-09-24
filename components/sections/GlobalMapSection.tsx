@@ -44,8 +44,8 @@ const GlobalMapSection: React.FC = () => {
     return (
         <SnapSection className="bg-zener-dark relative overflow-hidden">
 
-            {/* Background Globe */}
-            <div className="absolute inset-0 cursor-move">
+            {/* Background Globe (non-blocking for mobile scroll, fully interactive on desktop) */}
+            <div className="absolute inset-0 cursor-move pointer-events-none md:pointer-events-auto">
                 <Globe
                     ref={globeEl}
                     width={dimensions.width}
@@ -81,39 +81,39 @@ const GlobalMapSection: React.FC = () => {
                 />
             </div>
 
-            {/* Overlay UI */}
-            <div className="absolute inset-x-4 top-1/2 md:inset-x-auto md:left-10 transform -translate-y-1/2 z-10 pointer-events-none flex justify-center md:block">
+            {/* Overlay UI - Responsive positioning that never clips or traps scroll */}
+            <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 flex justify-center md:justify-start">
                 <motion.div
-                    initial={{ opacity: 0, x: -50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="bg-zener-glass border border-zener-border p-6 sm:p-8 rounded-xl w-full max-w-sm backdrop-blur-md pointer-events-auto shadow-2xl"
+                    className="bg-zener-glass border border-zener-border p-5 sm:p-8 rounded-xl w-full max-w-md backdrop-blur-md shadow-2xl"
                 >
-                    <h2 className="text-3xl font-bold text-white mb-2">Global Visibility</h2>
-                    <p className="text-zener-text-muted mb-6">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">Global Visibility</h2>
+                    <p className="text-xs sm:text-sm text-zener-text-muted mb-4 sm:mb-6 font-light">
                         Track every movement across your entire supply chain in real-time. From factory floor to final destination.
                     </p>
 
-                    <div className="space-y-4">
+                    <div className="space-y-3 sm:space-y-4">
                         <div className="flex items-center space-x-3">
-                            <Factory className="text-zener-cyan w-5 h-5" />
+                            <Factory className="text-zener-cyan w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
                             <div>
-                                <div className="text-white text-sm font-bold">12 Active Manufacturing Hubs</div>
-                                <div className="text-xs text-zener-text-muted">Operating at 94% Efficiency</div>
+                                <div className="text-white text-xs sm:text-sm font-bold">12 Active Manufacturing Hubs</div>
+                                <div className="text-[10px] sm:text-xs text-zener-text-muted">Operating at 94% Efficiency</div>
                             </div>
                         </div>
                         <div className="flex items-center space-x-3">
-                            <Warehouse className="text-zener-cyan w-5 h-5" />
+                            <Warehouse className="text-zener-cyan w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
                             <div>
-                                <div className="text-white text-sm font-bold">28 Distribution Centers</div>
-                                <div className="text-xs text-zener-text-muted">Inventory Level: Optimal</div>
+                                <div className="text-white text-xs sm:text-sm font-bold">28 Distribution Centers</div>
+                                <div className="text-[10px] sm:text-xs text-zener-text-muted">Inventory Level: Optimal</div>
                             </div>
                         </div>
                         <div className="flex items-center space-x-3">
-                            <ShoppingBag className="text-zener-cyan w-5 h-5" />
+                            <ShoppingBag className="text-zener-cyan w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
                             <div>
-                                <div className="text-white text-sm font-bold">Retail Integration</div>
-                                <div className="text-xs text-zener-text-muted">Live POS Data Sync</div>
+                                <div className="text-white text-xs sm:text-sm font-bold">Retail Integration</div>
+                                <div className="text-[10px] sm:text-xs text-zener-text-muted">Live POS Data Sync</div>
                             </div>
                         </div>
                     </div>

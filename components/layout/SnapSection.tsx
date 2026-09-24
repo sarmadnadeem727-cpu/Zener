@@ -9,7 +9,7 @@ interface SnapSectionProps {
 
 const SnapSection: React.FC<SnapSectionProps> = ({ children, className = '', id }) => {
     return (
-        <section id={id} className={`snap-section min-h-screen md:h-screen w-full relative overflow-visible md:overflow-hidden bg-zener-dark flex flex-col items-center justify-center py-16 md:py-0 ${className}`}>
+        <section id={id} className={`snap-section min-h-[100dvh] md:h-screen w-full relative overflow-visible md:overflow-hidden bg-zener-dark flex flex-col items-center justify-center pt-24 pb-20 md:py-0 px-4 sm:px-6 ${className}`}>
             {children}
         </section>
     );
