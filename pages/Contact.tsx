@@ -8,19 +8,19 @@ const Contact: React.FC = () => {
 
   return (
     <PageLayout>
-      <div className="bg-zener-dark min-h-screen pt-32 pb-24 px-6 relative overflow-hidden">
+      <div className="bg-zener-dark min-h-screen pt-28 sm:pt-32 pb-20 sm:pb-24 px-4 sm:px-6 relative overflow-hidden">
         {/* Background Decor */}
         <div className="absolute top-0 right-0 w-1/3 h-full border-l border-zener-border opacity-50 pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-full h-1/3 border-t border-zener-border opacity-50 pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 relative z-10">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 relative z-10">
 
           {/* Left: Content */}
           <div>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-5xl font-bold text-white mb-6"
+              className="text-3xl sm:text-5xl font-bold text-white mb-4 sm:mb-6"
             >
               Initiate <br />
               <span className="text-zener-cyan">Transformation.</span>
@@ -30,7 +30,7 @@ const Contact: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-xl text-zener-text-muted mb-12 max-w-lg font-light leading-relaxed"
+              className="text-base sm:text-xl text-zener-text-muted mb-8 sm:mb-12 max-w-lg font-light leading-relaxed"
             >
               Take time to let us present a structured project management timeline for your digital supply chain transformation.
             </motion.p>
@@ -39,25 +39,25 @@ const Contact: React.FC = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
-              className="space-y-8"
+              className="space-y-6 sm:space-y-8"
             >
               <div className="flex items-start space-x-4">
-                <div className="bg-zener-navy p-3 border border-zener-border rounded-sm">
-                  <Mail className="text-zener-cyan w-6 h-6" />
+                <div className="bg-zener-navy p-3 border border-zener-border rounded-lg">
+                  <Mail className="text-zener-cyan w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <div>
-                  <h3 className="text-white font-bold mb-1">Email Connection</h3>
-                  <p className="text-zener-text-muted">infrastructure@zener.com</p>
+                  <h3 className="text-white font-bold mb-1 text-sm sm:text-base">Email Connection</h3>
+                  <p className="text-xs sm:text-sm text-zener-text-muted">infrastructure@zener.com</p>
                 </div>
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="bg-zener-navy p-3 border border-zener-border rounded-sm">
-                  <MapPin className="text-zener-cyan w-6 h-6" />
+                <div className="bg-zener-navy p-3 border border-zener-border rounded-lg">
+                  <MapPin className="text-zener-cyan w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <div>
-                  <h3 className="text-white font-bold mb-1">Global Headquarters</h3>
-                  <p className="text-zener-text-muted">
+                  <h3 className="text-white font-bold mb-1 text-sm sm:text-base">Global Headquarters</h3>
+                  <p className="text-xs sm:text-sm text-zener-text-muted leading-relaxed">
                     10 Hudson Yards, Suite 4500<br />
                     New York, NY 10001
                   </p>
@@ -71,18 +71,18 @@ const Contact: React.FC = () => {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4 }}
-            className="bg-zener-navy/30 backdrop-blur-md p-10 border border-zener-border rounded-sm shadow-2xl"
+            className="bg-zener-navy/40 backdrop-blur-md p-6 sm:p-10 border border-zener-border rounded-2xl shadow-2xl"
           >
-            <h2 className="text-2xl font-bold text-white mb-8">System Access Request</h2>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-6 sm:mb-8">System Access Request</h2>
 
-            <form className="space-y-6">
-              <div className="grid grid-cols-2 gap-6">
+            <form className="space-y-5 sm:space-y-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div className="relative">
                   <label className="text-xs font-mono text-zener-cyan uppercase mb-2 block">Identity</label>
                   <input
                     type="text"
                     placeholder="Full Name"
-                    className="w-full bg-zener-dark border border-zener-border p-4 text-white focus:border-zener-cyan focus:outline-none transition-colors"
+                    className="w-full bg-zener-dark border border-zener-border p-3.5 sm:p-4 text-white focus:border-zener-cyan focus:outline-none transition-colors rounded-lg text-sm"
                   />
                 </div>
                 <div className="relative">
@@ -90,7 +90,7 @@ const Contact: React.FC = () => {
                   <input
                     type="text"
                     placeholder="Company"
-                    className="w-full bg-zener-dark border border-zener-border p-4 text-white focus:border-zener-cyan focus:outline-none transition-colors"
+                    className="w-full bg-zener-dark border border-zener-border p-3.5 sm:p-4 text-white focus:border-zener-cyan focus:outline-none transition-colors rounded-lg text-sm"
                   />
                 </div>
               </div>

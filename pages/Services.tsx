@@ -34,15 +34,15 @@ const Services: React.FC = () => {
 
   return (
     <PageLayout>
-      <div className="bg-zener-dark min-h-screen pt-24 pb-12 px-6">
+      <div className="bg-zener-dark min-h-screen pt-24 pb-16 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mb-16 border-b border-zener-border pb-8"
+            className="mb-12 sm:mb-16 border-b border-zener-border pb-6 sm:pb-8"
           >
-            <h1 className="text-5xl font-bold text-white mb-4">Core Services</h1>
-            <p className="text-xl text-zener-text-muted max-w-2xl">
+            <h1 className="text-3xl sm:text-5xl font-bold text-white mb-3 sm:mb-4">Core Services</h1>
+            <p className="text-base sm:text-xl text-zener-text-muted max-w-2xl font-light">
               Specialized engineering for the modern supply chain.
             </p>
           </motion.div>
@@ -55,7 +55,7 @@ const Services: React.FC = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="group relative bg-zener-navy/30 border border-zener-border hover:border-zener-cyan p-8 rounded-sm transition-colors duration-300 overflow-hidden"
+                className="group relative bg-zener-navy/30 border border-zener-border hover:border-zener-cyan p-5 sm:p-8 rounded-xl transition-colors duration-300 overflow-hidden"
               >
                 <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
                   <service.icon className="w-32 h-32 text-zener-cyan" />

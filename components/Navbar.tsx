@@ -64,7 +64,8 @@ const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { name: 'DISCOVER', path: '/' },
+    { name: 'ZENER SCM', path: '/' },
+    { name: 'HOLDINGS GROUP', path: '/holdings' },
     { name: 'SERVICES', path: '/services' },
     { name: 'CONTACT', path: '/contact' },
   ];
@@ -229,15 +230,43 @@ const Navbar: React.FC = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: '100%' }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed inset-0 bg-zener-dark z-40 flex flex-col justify-center px-8 border-l border-zener-border overflow-y-auto py-20"
+              className="fixed inset-0 bg-zener-dark/98 backdrop-blur-2xl z-40 flex flex-col justify-start px-6 pt-24 pb-28 border-l border-zener-border overflow-y-auto"
             >
-              <div className="space-y-6 mb-10">
+              {/* Mobile Entity Switcher */}
+              <div className="grid grid-cols-2 gap-2 mb-8 p-1 rounded-xl bg-zener-navy/80 border border-zener-border/80">
+                <Link
+                  to="/"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`py-3 px-2 rounded-lg text-center font-bold text-xs tracking-wider transition-all ${
+                    pathname === '/' 
+                      ? 'bg-zener-cyan text-zener-dark shadow-[0_0_12px_rgba(100,255,218,0.3)]'
+                      : 'text-zener-text-muted hover:text-white'
+                  }`}
+                >
+                  ZENER SCM
+                </Link>
+                <Link
+                  to="/holdings"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`py-3 px-2 rounded-lg text-center font-bold text-xs tracking-wider transition-all ${
+                    pathname === '/holdings'
+                      ? 'bg-zener-cyan text-zener-dark shadow-[0_0_12px_rgba(100,255,218,0.3)]'
+                      : 'text-zener-text-muted hover:text-white'
+                  }`}
+                >
+                  HOLDINGS GROUP
+                </Link>
+              </div>
+
+              <div className="space-y-4 mb-8">
                 {navLinks.map((link) => (
                   <Link
                     key={link.name}
                     to={link.path}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block text-2xl font-bold tracking-widest text-white hover:text-zener-cyan transition-colors"
+                    className={`block text-xl font-bold tracking-widest transition-colors py-1 ${
+                      pathname === link.path ? 'text-zener-cyan' : 'text-white hover:text-zener-cyan'
+                    }`}
                   >
                     {link.name}
                   </Link>

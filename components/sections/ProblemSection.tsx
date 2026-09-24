@@ -48,7 +48,7 @@ const ProblemSection: React.FC = () => {
                 </div>
 
                 {/* Visual Area */}
-                <div className="md:w-1/2 h-[500px] w-full relative flex items-center justify-center">
+                <div className="md:w-1/2 h-[380px] sm:h-[450px] md:h-[500px] w-full relative flex items-center justify-center scale-75 sm:scale-90 md:scale-100 origin-center">
                     {/* Center Grid Line (implied backbone) */}
                     <motion.div
                         className="absolute top-0 bottom-0 w-px bg-zener-cyan/20"

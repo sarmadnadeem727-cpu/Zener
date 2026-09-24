@@ -4,7 +4,7 @@ import HeroSection from '../components/sections/HeroSection';
 import ProblemSection from '../components/sections/ProblemSection';
 import InfrastructureSection from '../components/sections/InfrastructureSection';
 import IntelligenceSection from '../components/sections/IntelligenceSection';
-import HoldingsEcosystemSection from '../components/sections/HoldingsEcosystemSection';
+import HoldingsGatewaySection from '../components/sections/HoldingsGatewaySection';
 import GlobalMapSection from '../components/sections/GlobalMapSection';
 
 const Home: React.FC = () => {
@@ -14,7 +14,7 @@ const Home: React.FC = () => {
       <ProblemSection />
       <InfrastructureSection />
       <IntelligenceSection />
-      <HoldingsEcosystemSection />
+      <HoldingsGatewaySection />
       <GlobalMapSection />
     </SnapContainer>
   );

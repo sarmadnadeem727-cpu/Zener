@@ -43,9 +43,17 @@ const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-3 text-sm">
               <li>
+                <Link to="/holdings" className="text-[#64ffda] hover:text-white flex items-center justify-between group transition-colors font-medium">
+                  <span className="flex items-center gap-1.5">
+                    <span>Holdings Group Portal</span>
+                  </span>
+                  <span className="text-[9px] font-mono text-[#64ffda] bg-[#64ffda]/15 px-1.5 py-0.5 rounded border border-[#64ffda]/30">HQ</span>
+                </Link>
+              </li>
+              <li>
                 <Link to="/" className="text-white flex items-center justify-between group">
                   <span className="group-hover:text-[#64ffda] transition-colors">ZENER (SCM)</span>
-                  <span className="text-[9px] font-mono text-[#64ffda] bg-[#64ffda]/10 px-1.5 py-0.5 rounded border border-[#64ffda]/20">Active</span>
+                  <span className="text-[9px] font-mono text-gray-400 bg-white/5 px-1.5 py-0.5 rounded">Platform</span>
                 </Link>
               </li>
               <li>

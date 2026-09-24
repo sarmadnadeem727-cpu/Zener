@@ -72,6 +72,25 @@ body {
     overflow: hidden;
 }
 
+/* Mobile Phone UI Optimizations */
+@media (max-width: 768px) {
+    .snap-container {
+        height: auto !important;
+        min-height: 100vh;
+        overflow-y: visible !important;
+        scroll-snap-type: none !important;
+    }
+
+    .snap-section {
+        height: auto !important;
+        min-height: 100vh;
+        scroll-snap-align: none !important;
+        overflow: visible !important;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+}
+
 /* Hide scrollbar for clean UI in some sections */
 .no-scrollbar::-webkit-scrollbar {
     display: none;
@@ -80,4 +99,9 @@ body {
 .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
+}
+
+/* Mobile Safe Bottom Padding */
+.pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 16px);
 }

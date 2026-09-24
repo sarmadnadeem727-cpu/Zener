@@ -82,12 +82,12 @@ const GlobalMapSection: React.FC = () => {
             </div>
 
             {/* Overlay UI */}
-            <div className="absolute top-1/2 left-10 transform -translate-y-1/2 z-10 pointer-events-none">
+            <div className="absolute inset-x-4 top-1/2 md:inset-x-auto md:left-10 transform -translate-y-1/2 z-10 pointer-events-none flex justify-center md:block">
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="bg-zener-glass border border-zener-border p-8 rounded-lg max-w-sm backdrop-blur-md pointer-events-auto"
+                    className="bg-zener-glass border border-zener-border p-6 sm:p-8 rounded-xl w-full max-w-sm backdrop-blur-md pointer-events-auto shadow-2xl"
                 >
                     <h2 className="text-3xl font-bold text-white mb-2">Global Visibility</h2>
                     <p className="text-zener-text-muted mb-6">
