@@ -2,6 +2,8 @@ import React, { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Points, PointMaterial } from '@react-three/drei';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 import * as random from 'maath/random/dist/maath-random.esm';
 import SnapSection from '../layout/SnapSection';
 
@@ -71,19 +73,9 @@ const HeroSection: React.FC = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                    <div className="flex items-center gap-3 mb-6">
-                        <div className="w-12 h-12 rounded-lg bg-zener-navy/95 border border-zener-cyan/60 p-1.5 flex items-center justify-center shadow-[0_0_22px_rgba(100,255,218,0.35)]">
-                            <img src="/logo.png" alt="ZENER" className="w-full h-full object-contain rounded" />
-                        </div>
-                        <div className="flex flex-col">
-                            <span className="text-xs font-mono font-bold tracking-[0.25em] text-zener-cyan uppercase">ZENER HOLDINGS</span>
-                            <span className="text-[10px] font-mono tracking-widest text-zener-text-muted">ENTERPRISE SCM &amp; INFRASTRUCTURE</span>
-                        </div>
-                    </div>
-
-                    <h1 className="text-6xl md:text-8xl font-bold tracking-tight text-white mb-6">
+                    <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold tracking-tight text-white mb-6">
                         ZENER
-                        <span className="block text-2xl md:text-3xl font-light text-zener-text-muted tracking-[0.2em] mt-2">
+                        <span className="block text-xl sm:text-2xl md:text-3xl font-light text-zener-cyan tracking-[0.2em] mt-3">
                             DIGITAL SUPPLY CHAIN INFRASTRUCTURE
                         </span>
                     </h1>
@@ -93,28 +85,35 @@ const HeroSection: React.FC = () => {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                    className="max-w-2xl"
+                    className="max-w-2xl mb-10 space-y-3"
                 >
-                    <p className="text-xl md:text-2xl text-zener-text/80 mb-2 font-light">
-                        We Integrate ERP Systems.
-                    </p>
-                    <p className="text-xl md:text-2xl text-zener-text/80 mb-2 font-light">
-                        We Enable BI Intelligence.
-                    </p>
-                    <p className="text-xl md:text-2xl text-zener-text/80 mb-10 font-light">
-                        We Engineer Operational Clarity.
-                    </p>
+                    <div className="flex items-center gap-3 text-lg sm:text-xl md:text-2xl text-zener-text font-light">
+                        <span className="w-2 h-2 rounded-full bg-zener-cyan shrink-0 shadow-[0_0_8px_rgba(100,255,218,0.8)]" />
+                        <span>We Integrate <strong className="font-semibold text-white">ERP Systems</strong>.</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-lg sm:text-xl md:text-2xl text-zener-text font-light">
+                        <span className="w-2 h-2 rounded-full bg-zener-cyan shrink-0 shadow-[0_0_8px_rgba(100,255,218,0.8)]" />
+                        <span>We Enable <strong className="font-semibold text-white">BI Intelligence</strong>.</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-lg sm:text-xl md:text-2xl text-zener-text font-light">
+                        <span className="w-2 h-2 rounded-full bg-zener-cyan shrink-0 shadow-[0_0_8px_rgba(100,255,218,0.8)]" />
+                        <span>We Engineer <strong className="font-semibold text-white">Operational Clarity</strong>.</span>
+                    </div>
                 </motion.div>
 
-                <motion.button
+                <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.6 }}
-                    className="group relative px-8 py-4 border border-zener-cyan/50 text-zener-cyan font-bold tracking-widest uppercase text-sm hover:bg-zener-cyan hover:text-zener-dark transition-all duration-300 overflow-hidden"
+                    transition={{ duration: 0.6, delay: 0.5 }}
                 >
-                    <span className="relative z-10">Explore the System</span>
-                    <div className="absolute inset-0 bg-zener-cyan/10 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-                </motion.button>
+                    <Link
+                        to="/services"
+                        className="group relative inline-flex items-center gap-3 px-8 py-4 border border-zener-cyan/60 bg-zener-cyan/10 hover:bg-zener-cyan text-zener-cyan hover:text-zener-dark font-bold tracking-widest uppercase text-xs sm:text-sm transition-all duration-300 shadow-[0_0_20px_rgba(100,255,218,0.2)] hover:shadow-[0_0_30px_rgba(100,255,218,0.5)] rounded"
+                    >
+                        <span className="relative z-10">Explore Services</span>
+                        <ArrowRight size={16} className="relative z-10 group-hover:translate-x-1.5 transition-transform duration-300" />
+                    </Link>
+                </motion.div>
             </div>
 
             {/* Decorative Grid Lines - Bottom */}
