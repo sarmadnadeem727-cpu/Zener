@@ -1,0 +1,83 @@
+/* Tailwind directives removed for CDN usage */
+
+:root {
+    --bg-core: #0a192f;
+    /* Deep Navy */
+    --bg-secondary: #0f2342;
+    /* Lighter Navy */
+    --accent-cyan: #64ffda;
+    /* Refined Cyan */
+    --text-primary: #e6f1ff;
+    --text-secondary: #8892b0;
+    --glass-border: rgba(100, 255, 218, 0.1);
+    --glass-bg: rgba(10, 25, 47, 0.85);
+}
+
+body {
+    background-color: var(--bg-core);
+    color: var(--text-primary);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-core);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(100, 255, 218, 0.2);
+    border-radius: 3px;
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(100, 255, 218, 0.4);
+}
+
+/* Utilities */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+}
+
+.text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(90deg, #e6f1ff, #64ffda);
+}
+
+/* Snap Scroll Utilities */
+.snap-container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+.snap-section {
+    height: 100vh;
+    width: 100%;
+    scroll-snap-align: start;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hide scrollbar for clean UI in some sections */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
